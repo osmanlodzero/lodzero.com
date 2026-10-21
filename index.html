@@ -1,454 +1,328 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#121c18">
-  <meta name="description" content="LODZERO Engine is a young C# real-time 3D engine and editor built with LLMs in the loop, focused on practical tools, clean workflows, modern rendering, and a calm path from idea to playable build.">
+  <meta name="theme-color" content="#0a0b0d">
+  <meta name="description" content="LODZERO is a small, fast game engine and editor made for artists and programmers alike. Model, texture, light, script and play in one place.">
+  <meta property="og:title" content="LODZERO Engine">
+  <meta property="og:description" content="A love letter to making games: a small, fast engine and editor where everything you need is in one place.">
+  <meta property="og:image" content="https://lodzero.com/media/hero-sumo.jpg">
   <title>LODZERO Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <a class="skip-link" href="#features">Skip to features</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="shell header-inner">
-      <a class="logo" href="#">LODZERO<span class="logo-mark">Engine</span></a>
+      <a class="wordmark" href="#top" aria-label="LODZERO home">LODZERO<span>engine</span></a>
       <nav class="nav" aria-label="Primary">
-        <a href="#features">Features</a>
-        <a href="https://twitter.com/ozmant" target="_blank" rel="noopener noreferrer">Twitter</a>
-        <a href="mailto:osman@lodzero.com" class="nav-cta">Contact</a>
+        <a href="#why">Why</a>
+        <a href="#showcase">Features</a>
+        <a href="#games">Games</a>
+        <a class="btn btn-small" href="#contact">Early access</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Quick overview</p>
-          <h1>LODZERO Engine</h1>
-          <p class="lede">
-            LODZERO is a new real-time 3D engine and editor.
-            It is small enough to understand, deep enough to build real worlds in, and written in <strong>C#</strong> from engine code to gameplay.
-            It is being built with LLMs in the loop: not as a gimmick, but as another set of hands for the renderer, editor, tooling, docs, and tests.
-          </p>
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <video class="hero-video" src="media/hero-sumo.mp4" poster="media/hero-sumo.jpg" muted loop playsinline autoplay preload="auto" aria-hidden="true"></video>
+      <div class="hero-shade"></div>
+      <div class="shell hero-content">
+        <p class="eyebrow">Game engine &amp; editor</p>
+        <h1>Make games that look great and run smooth.</h1>
+        <p class="lede">LODZERO is a small, fast engine made for artists and programmers alike. Model, texture, light, script and play in one place, then ship your game to Steam.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#contact">Request early access</a>
+          <a class="btn btn-ghost" href="#showcase">See what it does</a>
         </div>
-        <div class="hero-visual">
-          <figure class="shot-frame">
-            <img
-              src="content/features/editor.png"
-              alt="LODZERO Engine editor: 3D viewport, scene hierarchy, inspectors, and workspace."
-              width="1151"
-              height="790"
-              loading="eager"
-              decoding="async">
-          </figure>
+        <ul class="facts" aria-label="Key facts">
+          <li>~300 MB download</li>
+          <li>C# from top to bottom</li>
+          <li>Vulkan</li>
+          <li>Ships to Steam</li>
+        </ul>
+      </div>
+      <p class="hero-caption shell">Sumo Cars, running on LODZERO</p>
+    </section>
+
+    <!-- Why -->
+    <section class="why" id="why" aria-labelledby="why-title">
+      <div class="shell">
+        <div class="why-intro">
+          <p class="eyebrow">Why LODZERO</p>
+          <h2 id="why-title">A love letter to making games.</h2>
+          <p class="lede">We built LODZERO to make the games we always wanted to make, the way we always wanted to make them. That meant leaving a lot of baggage behind.</p>
+        </div>
+        <ul class="nopes" aria-label="What we left out">
+          <li>Blurry, smeary frames</li>
+          <li>Installs measured in gigabytes</li>
+          <li>Coffee-break C++ compiles</li>
+          <li>Five apps to make one asset</li>
+          <li>Multiplayer bugs nobody can reproduce</li>
+        </ul>
+        <p class="why-punch">Everything is here. <span>Fast, small and fun.</span></p>
+        <div class="pillars">
+          <article class="pillar">
+            <h3>Small</h3>
+            <p>The whole editor is a download of about 300 MB. It installs in moments, opens fast and stays out of your way.</p>
+          </article>
+          <article class="pillar">
+            <h3>Fast</h3>
+            <p>Sharp, steady frames in the game and in the editor. Change code, a mesh or a light and see it straight away, no waiting.</p>
+          </article>
+          <article class="pillar">
+            <h3>Made for artists</h3>
+            <p>Every tool is visual, immediate and undoable, so you can try ideas without fear. Model, texture, light and play without ever leaving the editor.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="features" id="features">
-      <nav class="feature-nav shell" aria-label="Jump to feature">
-        <ul class="feature-pills">
-          <li><a class="feature-pill" href="#feature-csharp">C#</a></li>
-          <li><a class="feature-pill" href="#feature-forward-plus">Forward+ MSAA</a></li>
-          <li><a class="feature-pill" href="#feature-hot-reload">Hot reload</a></li>
-          <li><a class="feature-pill" href="#feature-input">Input</a></li>
-          <li><a class="feature-pill" href="#feature-lightmaps">Lightmaps</a></li>
-          <li><a class="feature-pill" href="#feature-materials">Materials</a></li>
-          <li><a class="feature-pill" href="#feature-hlsl">HLSL</a></li>
-          <li><a class="feature-pill" href="#feature-jolt">Jolt</a></li>
-          <li><a class="feature-pill" href="#feature-animation">Animation</a></li>
-          <li><a class="feature-pill" href="#feature-quickui">QuickUI</a></li>
-          <li><a class="feature-pill" href="#feature-code-editor">Code editor</a></li>
-          <li><a class="feature-pill" href="#feature-csg">CSG</a></li>
-          <li><a class="feature-pill" href="#feature-packaging">Packaging</a></li>
-          <li><a class="feature-pill" href="#feature-pipeline">Pipeline</a></li>
-        </ul>
-      </nav>
+    <!-- Showcase -->
+    <section class="showcase" id="showcase" aria-label="Highlights">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Highlights</p>
+          <h2>The good stuff, in motion.</h2>
+        </div>
+      </div>
 
-      <article class="feature-band feature-band--flip" id="feature-csharp">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <div class="code-window" role="img" aria-label="Sample C# component code">
-              <div class="code-window-bar">
-                <span>IdleRotate.cs</span>
-              </div>
-              <pre class="code-block"><code><span class="tk-k">using</span> <span class="tk-t">Engine</span>.<span class="tk-t">CoreMath</span>;
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/play-in-editor.mp4" poster="media/play-in-editor.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Editor</p>
+          <h3>Hit Play. You're in the game.</h3>
+          <p>Play runs your real game right inside the editor, menus, HUD and all. Stop, tweak a value or a mesh, and you're back in. Code changes land in the running editor almost instantly.</p>
+          <ul class="ticks"><li>Play in the viewport or its own window</li><li>Hot reload for your game code</li><li>Undo for every edit</li></ul>
+        </div>
+      </article>
 
-<span class="tk-c">/// Idle rotation for signage, fans, or showcase props.</span>
-<span class="tk-k">public sealed class</span> <span class="tk-t">IdleRotate</span> <span class="tk-k">:</span> <span class="tk-t">Component</span>
-{
-    [<span class="tk-a">Serialize</span>]
-    <span class="tk-k">public float</span> <span class="tk-v">DegreesPerSecond</span> { <span class="tk-k">get</span>; <span class="tk-k">set</span>; } <span class="tk-k">=</span> <span class="tk-n">45</span>f;
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/multiplayer.mp4" poster="media/multiplayer.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Multiplayer</p>
+          <h3>Online multiplayer, built right in.</h3>
+          <p>Mark a value to sync it and a method to call it across the network, and you're online. Go server-authoritative so results are consistent and cheat-resistant, or client-authoritative so each player simulates their own objects. Either way, every player's own actions feel instant. Test a whole match with several players inside the editor.</p>
+          <ul class="ticks"><li>Server- or client-authoritative</li><li>Prediction and rollback</li><li>Lag compensation</li><li>Rejoin and host migration</li><li>Steam lobbies, invites and relay</li></ul>
+        </div>
+      </article>
 
-    <span class="tk-k">public override void</span> <span class="tk-f">Update</span>(<span class="tk-k">double</span> <span class="tk-v">deltaTime</span>)
-    {
-        <span class="tk-t">Transform</span>.<span class="tk-f">RotateLocalDegrees</span>(<span class="tk-t">EngineBasis</span>.<span class="tk-v">Up</span>,
-            <span class="tk-v">DegreesPerSecond</span> <span class="tk-k">*</span> (<span class="tk-k">float</span>)<span class="tk-v">deltaTime</span>);
-    }
-}</code></pre>
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/killcam.mp4" poster="media/killcam.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Replays</p>
+          <h3>Every knockout gets its replay.</h3>
+          <p>Instant replays and killcams are part of the engine. Show the last few seconds from any camera, slow it down, cut back to the action. They're light enough to leave on all the time.</p>
+          <ul class="ticks"><li>Instant replays and killcams</li><li>Any camera, any moment</li><li>Works in online matches</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/time-travel.mp4" poster="media/time-travel.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Time travel</p>
+          <h3>Rewind any play session. Then take over.</h3>
+          <p>Every time you press Play, the session is recorded. Scrub back to the moment something went wrong, step through it frame by frame, and grab the controls from right there. Bugs that happen once can be watched again and again.</p>
+          <ul class="ticks"><li>Seek, step and take over</li><li>Every session recorded automatically</li><li>Shows exactly where a run went differently</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/modelling.mp4" poster="media/modelling.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Modelling</p>
+          <h3>A modelling suite, right in the level.</h3>
+          <p>Block out and finish geometry where it lives, with the tools you reach for every day. Collision follows the mesh as you work: cut a hole and players can fall through it.</p>
+          <ul class="ticks"><li>Extrude, bevel, inset, bridge, loops and cuts</li><li>Booleans, mirror and soft selection</li><li>UV tools and automatic unwrapping</li><li>Curves and swept pipes</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/hotspot-mapping.mp4" poster="media/hotspot-mapping.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Hotspotting</p>
+          <h3>Trim sheets that apply themselves.</h3>
+          <p>Model a shape and its faces find the right part of a hotspot sheet on their own: trims, panels and bevels land where they belong, at a consistent texel density. Level art that looks finished while you're still blocking it out.</p>
+          <ul class="ticks"><li>Hotspot, strip and pipe mapping</li><li>Consistent texel density</li><li>Hotspot sheets made in texture graphs</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/ai-modelling.mp4" poster="media/ai-modelling.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">AI modelling <span class="badge">Experimental</span></p>
+          <h3>Ask for a bar stool. Get a bar stool.</h3>
+          <p>Describe a model and an AI agent builds it with the editor's own modelling tools: it blocks it out, checks its renders and refines. The result is ordinary, editable geometry, and it can change models you made too.</p>
+          <ul class="ticks"><li>Uses the same tools you do</li><li>Plain, editable meshes</li><li>Edits the selected model on request</li></ul>
+        </div>
+      </article>
+
+      <article class="feature feature-duo">
+        <div class="feature-media duo">
+          <video data-src="media/texture-graph.mp4" poster="media/texture-graph.jpg" muted loop playsinline preload="none"></video>
+          <video data-src="media/hotspots.mp4" poster="media/hotspots.jpg" muted loop playsinline preload="none"></video>
+        </div>
+        <div class="feature-copy">
+          <p class="kicker">Texture graphs <span class="badge">Preview</span></p>
+          <h3>Procedural materials, node by node.</h3>
+          <p>A full node-based texture generator inside the editor: noises, patterns, filters, blends and PBR outputs, with a live 3D preview. Graphs can texture a mesh from its own shape, and textures stay linked to the graph that made them.</p>
+          <ul class="ticks"><li>Hundreds of nodes</li><li>Hotspot sheets for trims and panels</li><li>Rounded edges and panels baked from the mesh</li><li>Imports Substance Designer graphs</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/realtime-gi.mp4" poster="media/realtime-gi.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Realtime GI <span class="badge">Preview</span></p>
+          <h3>Light that bounces in real time.</h3>
+          <p>Move the sun, a lamp or a wall and the bounce light follows at once, with no bake. Ray-traced probes fill the world and a per-pixel final gather keeps corners and contact shading crisp.</p>
+          <ul class="ticks"><li>Hardware ray-traced probes</li><li>Per-pixel final gather</li><li>Dynamic sun, lights and geometry</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/live-lighting.mp4" poster="media/live-lighting.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Live lighting</p>
+          <h3>Baked lighting with no Bake button.</h3>
+          <p>Prefer baked? Move a wall and the lightmaps rebake in the background while you keep working. The GPU baker uses hardware ray tracing and denoising, with reflection probes that fit their rooms.</p>
+          <ul class="ticks"><li>Background rebakes while you edit</li><li>Hardware ray-traced bakes</li><li>Directional lightmaps and light probes</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/game-ui.mp4" poster="media/game-ui.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Game UI</p>
+          <h3>Game UI you can scrub like a timeline.</h3>
+          <p>Author HUDs and menus as widgets, then preview every state and animation without starting the game. The code that connects them to your game is generated for you.</p>
+          <ul class="ticks"><li>Visual widget authoring</li><li>Live preview with sample data</li><li>Localization built in</li></ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- Games -->
+    <section class="games" id="games" aria-labelledby="games-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Made with LODZERO</p>
+          <h2 id="games-title">Games ship on it. That's how it gets good.</h2>
+        </div>
+        <div class="game-grid">
+          <article class="game">
+            <img src="media/sumo-cars.jpg" alt="Cars battling around a pit in a Sumo Cars arena" loading="lazy" width="1136" height="639">
+            <div class="game-copy">
+              <h3>Sumo Cars</h3>
+              <p>Party car sumo for up to six players online. Bump, blast and knock your friends off floating arenas.</p>
+              <a class="link" href="https://store.steampowered.com/app/1500880/" target="_blank" rel="noopener">On Steam as Random Racing →</a>
             </div>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title"><span class="accent">C#</span></h3>
-            <p>There is no separate little scripting island. The engine, editor, and gameplay code are all ordinary <strong>C#</strong>, so game components feel like real software: typed, inspectable, reloadable, and close to the systems they drive.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band" id="feature-forward-plus">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame">
-              <img
-                src="content/features/msaa.png"
-                alt="LODZERO Engine: Forward+ MSAA viewport with sharp geometry and clean edges."
-                width="733"
-                height="445"
-                loading="lazy"
-                decoding="async">
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Forward+ MSAA</h3>
-            <p>The renderer is built around a crisp <strong>Forward+ MSAA</strong> path. It keeps the image clean, handles busy lighting scenes without giving up on sharp geometry, and has the practical extras you expect when tuning a real scene: depth pre-pass, ambient occlusion, shadows, probes, and specular anti-aliasing.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band feature-band--flip" id="feature-hot-reload">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame">
-              <img
-                src="content/features/hotreload.png"
-                alt="LODZERO Engine Editor: 3D viewport, built-in C# editor with IdleRotateComponent, log panel, and project code reload notification."
-                width="1920"
-                height="1080"
-                loading="lazy"
-                decoding="async">
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Hot reload</h3>
-            <p>Stay in the scene while the code changes around it. Save a component, let the project rebuild, and the editor can reload your game assembly without throwing away the moment you were testing.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band" id="feature-input">
-        <div class="shell feature-row">
-          <div class="feature-text">
-            <h3 class="feature-title">Input</h3>
-            <p>Input is intentionally simple: one clear snapshot each frame for keyboard and mouse, shared by editor and standalone builds. UI, gameplay, and cursor capture all follow the same rules, which keeps small prototypes and serious tools feeling predictable.</p>
-          </div>
-          <div class="feature-shot">
-            <div class="code-window" role="img" aria-label="Example: reading GameInput in gameplay code">
-              <div class="code-window-bar">
-                <span>Player.Move.cs</span>
-              </div>
-              <pre class="code-block code-block--compact"><code><span class="tk-c">/// One snapshot per Update - edge or held keys, mouse delta.</span>
-<span class="tk-k">if</span> (<span class="tk-v">Input</span>!.<span class="tk-f">IsKeyPressed</span>(<span class="tk-t">GameKey</span>.<span class="tk-v">Space</span>))
-    <span class="tk-v">JumpRequested</span> <span class="tk-k">=</span> <span class="tk-k">true</span>;
-
-<span class="tk-k">var</span> <span class="tk-v">look</span> <span class="tk-k">=</span> <span class="tk-v">Input</span>.<span class="tk-v">MouseDelta</span>;</code></pre>
+          </article>
+          <article class="game">
+            <video data-src="media/pocodoro.mp4" poster="media/pocodoro.jpg" muted loop playsinline preload="none" aria-label="The PocoDoro device booting up, with the slime pet playing in its room"></video>
+            <div class="game-copy">
+              <h3>PocoDoro</h3>
+              <p>A tiny pet that lives on your desktop. Care for it while you work, and it grows into its own little character.</p>
+              <a class="link" href="https://store.steampowered.com/app/2636240/" target="_blank" rel="noopener">Wishlist on Steam →</a>
             </div>
-          </div>
+          </article>
         </div>
-      </article>
+      </div>
+    </section>
 
-      <article class="feature-band feature-band--flip" id="feature-lightmaps">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame">
-              <video
-                controls
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                src="content/features/lightmaps.mp4"
-                aria-label="Baked lightmaps and indirect lighting in the editor or viewport (plays muted until unmuted).">
-                Your browser does not support embedded video. <a href="content/features/lightmaps.mp4">Download the clip</a>.
-              </video>
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Lightmaps</h3>
-            <p>Lightmaps give static scenes their settled, handmade feeling. The baker handles direct light, bounced <strong>GI</strong>, denoising, contact AO, and directional lightmap data so baked surfaces still respond naturally to their normals in the live renderer.</p>
-          </div>
+    <!-- Toolbox -->
+    <section class="toolbox" id="toolbox" aria-labelledby="toolbox-title">
+      <div class="shell">
+        <div class="section-head">
+          <p class="eyebrow">Everything else</p>
+          <h2 id="toolbox-title">The rest of the toolbox.</h2>
         </div>
-      </article>
+        <div class="tool-grid">
+          <section class="tool">
+            <h3>Rendering</h3>
+            <ul>
+              <li>Forward or deferred, MSAA or TAA</li>
+              <li>Ambient occlusion, reflections, depth of field, motion blur</li>
+              <li>Soft sun shadows and many shadowed lights</li>
+              <li>Area lights, height fog, cloud layers, 3D skyboxes</li>
+              <li>Projected decals, skid marks and water ripples</li>
+              <li>HLSL surface shaders</li>
+            </ul>
+          </section>
+          <section class="tool">
+            <h3>Effects</h3>
+            <ul>
+              <li>GPU particles with curves, flipbooks and ribbons</li>
+              <li>Soft and lit particles, emitter lights</li>
+              <li>Ropes, cables and dynamic lines</li>
+              <li>Glass, jelly and liquid materials</li>
+            </ul>
+          </section>
+          <section class="tool">
+            <h3>Physics</h3>
+            <ul>
+              <li>Rigid bodies, joints and characters</li>
+              <li>Vehicles, from sim to arcade</li>
+              <li>Navigation meshes and agents</li>
+              <li>Squishy elastic solids <span class="badge">Experimental</span></li>
+            </ul>
+          </section>
+          <section class="tool">
+            <h3>Animation</h3>
+            <ul>
+              <li>Skeletal animation from glTF</li>
+              <li>Animation graphs and state machines</li>
+              <li>Motion matching</li>
+              <li>Skeleton editing and pose mode</li>
+            </ul>
+          </section>
+          <section class="tool">
+            <h3>C# all the way</h3>
+            <ul>
+              <li>Engine, editor and gameplay in one language</li>
+              <li>Fast compiles, no C++ toolchain</li>
+              <li>Determinism checks for networked code</li>
+              <li>Visual scripting that turns into C#</li>
+            </ul>
+          </section>
+          <section class="tool">
+            <h3>Ship it</h3>
+            <ul>
+              <li>One-click packaging with content streaming</li>
+              <li>Native, ahead-of-time compiled builds</li>
+              <li>Steam uploads from the editor</li>
+              <li>Installer and a build-your-first-game tutorial</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
 
-      <article class="feature-band" id="feature-materials">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame">
-              <img
-                src="content/features/materials.png"
-                alt="LODZERO Engine: materials and PBR shading in the viewport or editor."
-                width="1920"
-                height="1080"
-                loading="lazy"
-                decoding="async">
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Materials</h3>
-            <p>Materials start with the familiar <strong>PBR</strong> surface controls you want day to day. When a project needs its own look, focused <strong>HLSL</strong> hooks let you bend the surface without taking over the whole lighting pipeline.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band feature-band--flip" id="feature-hlsl">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <div class="code-window" role="img" aria-label="HLSL: Unlit Material example">
-              <div class="code-window-bar">
-                <span>Materials/ToonRim.Unlit.hlsl</span>
-              </div>
-              <pre class="code-block code-block--compact"><code><span class="tk-c">// Unlit path: no BRDF, shadows, or probe loops; full stylistic control.</span>
-<span class="tk-t">float4</span> <span class="tk-f">EvaluateUnlit</span>(<span class="tk-t">UnlitMaterialInput</span> <span class="tk-v">input</span>)
-{
-    <span class="tk-t">float</span> <span class="tk-v">rim</span> <span class="tk-k">=</span> <span class="tk-f">pow</span>(<span class="tk-n">1.0</span> <span class="tk-k">-</span> <span class="tk-f">saturate</span>(<span class="tk-f">dot</span>(
-        <span class="tk-f">normalize</span>(<span class="tk-v">input</span>.<span class="tk-v">GeometryNormal</span>), <span class="tk-v">input</span>.<span class="tk-v">ViewDir</span>)), <span class="tk-n">3.0</span>);
-    <span class="tk-k">return</span> <span class="tk-t">float4</span>(<span class="tk-v">input</span>.<span class="tk-v">BaseColor</span> <span class="tk-k">+</span> <span class="tk-v">rim</span> <span class="tk-k">*</span> <span class="tk-t">float3</span>(<span class="tk-n">0.2</span>, <span class="tk-n">0.6</span>, <span class="tk-n">1.0</span>),
-        <span class="tk-v">input</span>.<span class="tk-v">Alpha</span>);
-}</code></pre>
-            </div>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">HLSL</h3>
-            <p>Shader work belongs in the project, not behind a mystery wall. Write <strong>HLSL</strong> for lit materials, unlit effects, fullscreen passes, and compute jobs; the engine takes care of turning that into the runtime shader outputs it needs.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band" id="feature-jolt">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame shot-frame--github-card">
-              <a
-                class="github-repo-card"
-                href="https://github.com/jrouwe/JoltPhysics"
-                target="_blank"
-                rel="noopener noreferrer">
-                <div class="github-repo-card__top">
-                  <svg class="github-repo-card__mark" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                    <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                  </svg>
-                  <span class="github-repo-card__pill">Public</span>
-                </div>
-                <p class="github-repo-card__slug">
-                  <span class="github-repo-card__owner">jrouwe</span><span class="github-repo-card__slash">/</span><span class="github-repo-card__repo">JoltPhysics</span>
-                </p>
-                <p class="github-repo-card__desc">A multi core friendly rigid body physics and collision detection library. Written in C++. Suitable for games and VR applications.</p>
-                <div class="github-repo-card__footer">
-                  <span class="github-repo-card__lang">
-                    <span class="github-repo-card__lang-dot" aria-hidden="true"></span>
-                    C++
-                  </span>
-                </div>
-              </a>
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Jolt physics</h3>
-            <p><strong>Jolt Physics</strong> gives the world weight. Rigid bodies, colliders, mesh collision, and character capsules are part of the engine component model, so physics feels like another native piece of the scene instead of a separate demo layer. The engine integrates <a href="https://github.com/jrouwe/JoltPhysics" target="_blank" rel="noopener noreferrer">Jolt</a> through JoltPhysicsSharp.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band feature-band--flip" id="feature-animation">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame">
-              <video
-                controls
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                src="content/features/animgraph.mp4"
-                aria-label="Screen recording of the animation graph editor: node-based authoring and playback (plays muted until unmuted).">
-                Your browser does not support embedded video. <a href="content/features/animgraph.mp4">Download the clip</a>.
-              </video>
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Animation Graph</h3>
-            <p>Characters move through node-based <strong>animation graphs</strong>. Import clips, blend poses, tune playback, and let the engine handle the skinning path so animated scenes can grow without turning every character into one-off code.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band" id="feature-quickui">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <div class="code-window" role="img" aria-label="Sample QuickUI overlay code">
-              <div class="code-window-bar">
-                <span>PlayHud.Quick.cs</span>
-              </div>
-              <pre class="code-block code-block--compact"><code><span class="tk-c">/// Quick overlays on the same retained tree as the editor.</span>
-<span class="tk-v">_quickUi</span>.<span class="tk-f">Frame</span>(() =>
-{
-    <span class="tk-k">using</span> (<span class="tk-t">QUI</span>.<span class="tk-f">Window</span>(<span class="tk-s">"Play HUD"</span>)
-        .<span class="tk-f">Align</span>(<span class="tk-t">UIAlign</span>.<span class="tk-v">Start</span>, <span class="tk-t">UIAlign</span>.<span class="tk-v">End</span>)
-        .<span class="tk-f">NoInputs</span>())
-    {
-        <span class="tk-t">QUI</span>.<span class="tk-f">Text</span>(<span class="tk-s">$"Health {health}"</span>);
-        <span class="tk-t">QUI</span>.<span class="tk-f">Muted</span>(<span class="tk-v">objective</span>);
-        <span class="tk-t">QUI</span>.<span class="tk-f">Button</span>(<span class="tk-s">"Respawn"</span>, <span class="tk-v">OnRespawn</span>);
-    }
-});</code></pre>
-            </div>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">QuickUI</h3>
-            <p><strong>QuickUI</strong> is for the little interfaces that should be easy: HUDs, debug panels, quick tools, and in-game overlays. It feels immediate, but still rides on the same retained UI system as the editor.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band feature-band--flip" id="feature-code-editor">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame">
-              <video
-                controls
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                src="content/features/code_editor.mp4"
-                aria-label="Screen recording of the in-engine C# and HLSL code editor (plays muted until unmuted).">
-                Your browser does not support embedded video. <a href="content/features/code_editor.mp4">Download the clip</a>.
-              </video>
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Built-in code editor</h3>
-            <p>The editor can be a place where code actually happens. C# and HLSL buffers, highlighting, completions, diagnostics, and project-aware help make quick iteration possible without constantly leaving the engine.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band" id="feature-csg">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame shot-frame--github-card">
-              <a
-                class="github-repo-card"
-                href="https://github.com/elalish/manifold"
-                target="_blank"
-                rel="noopener noreferrer">
-                <div class="github-repo-card__top">
-                  <svg class="github-repo-card__mark" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                    <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                  </svg>
-                  <span class="github-repo-card__pill">Public</span>
-                </div>
-                <p class="github-repo-card__slug">
-                  <span class="github-repo-card__owner">elalish</span><span class="github-repo-card__slash">/</span><span class="github-repo-card__repo">manifold</span>
-                </p>
-                <p class="github-repo-card__desc">Geometry library for topological robustness.</p>
-                <div class="github-repo-card__footer">
-                  <span class="github-repo-card__lang">
-                    <span class="github-repo-card__lang-dot" aria-hidden="true"></span>
-                    C++
-                  </span>
-                </div>
-              </a>
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Modeling & CSG</h3>
-            <p>Sometimes you want to build inside the engine. The <strong>CSG</strong> tools let you block out, cut, combine, and bake shapes into normal meshes that use the same materials, lighting, and scene tools as imported content. Booleans run on <a href="https://github.com/elalish/manifold" target="_blank" rel="noopener noreferrer">Manifold</a> through ManifoldNET.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band feature-band--flip" id="feature-packaging">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame">
-              <video
-                controls
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                src="content/features/packaging.mp4"
-                aria-label="Screen recording of packaging a project from the editor to a runnable build (plays muted until unmuted).">
-                Your browser does not support embedded video. <a href="content/features/packaging.mp4">Download the clip</a>.
-              </video>
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Packaging</h3>
-            <p>A game engine should eventually hand you a game. <strong>Package Game</strong> cooks the project, gathers the runtime data, writes the content archive, publishes the assemblies, and leaves you with a clean folder you can actually run.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="feature-band" id="feature-pipeline">
-        <div class="shell feature-row">
-          <div class="feature-shot">
-            <figure class="shot-frame shot-frame--github-card">
-              <a
-                class="github-repo-card"
-                href="https://github.com/KhronosGroup/glTF"
-                target="_blank"
-                rel="noopener noreferrer">
-                <div class="github-repo-card__top">
-                  <svg class="github-repo-card__mark" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                    <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                  </svg>
-                  <span class="github-repo-card__pill">Public</span>
-                </div>
-                <p class="github-repo-card__slug">
-                  <span class="github-repo-card__owner">KhronosGroup</span><span class="github-repo-card__slash">/</span><span class="github-repo-card__repo">glTF</span>
-                </p>
-                <p class="github-repo-card__desc">glTF – Runtime 3D Asset Delivery.</p>
-                <div class="github-repo-card__footer">
-                  <span class="github-repo-card__lang">
-                    <span class="github-repo-card__lang-dot github-repo-card__lang-dot--html" aria-hidden="true"></span>
-                    HTML
-                  </span>
-                </div>
-              </a>
-            </figure>
-          </div>
-          <div class="feature-text">
-            <h3 class="feature-title">Content pipeline</h3>
-            <p>The content pipeline keeps authoring friendly and runtime lean. Bring in <a href="https://github.com/KhronosGroup/glTF" target="_blank" rel="noopener noreferrer"><strong>glTF</strong></a> / <strong>GLB</strong> assets, keep the editable project data readable, and let cooking turn heavy assets into the runtime format the packaged game wants.</p>
-          </div>
-        </div>
-      </article>
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-inner">
+        <h2 id="contact-title">Want to build something on it?</h2>
+        <p class="lede">LODZERO is in early access on Windows. Tell us what you're making and we'll get you set up. Studios, publishers and press are welcome too.</p>
+        <div class="hero-actions">
+          <a class="btn" href="mailto:contact@lodzero.com?subject=LODZERO%20early%20access">contact@lodzero.com</a>
+          <a class="btn btn-ghost" href="https://x.com/L0DZER0" target="_blank" rel="noopener">Follow on X</a>        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-grid">
-      <div>
-        <p class="footer-brand">LODZERO Engine</p>
-        <p class="footer-note">&copy; <span id="y"></span></p>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:osman@lodzero.com">osman@lodzero.com</a>
-        <a href="https://twitter.com/ozmant" target="_blank" rel="noopener">Twitter</a>
-      </div>
+    <div class="shell footer-inner">
+      <span class="wordmark">LODZERO<span>engine</span></span>
+      <span>&copy; 2026 LODZERO. Built on Vulkan, .NET, Box3D, Recast, SDL and other great open source.</span>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
