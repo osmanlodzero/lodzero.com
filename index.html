@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0a0b0d">
-  <meta name="description" content="LODZERO is a small, fast game engine and editor made for artists and programmers alike. Model, texture, light, script and play in one place.">
+  <meta name="description" content="LODZERO is a small, fast game engine and editor made for artists and programmers alike. Model, texture, grow trees, light, script and play in one place.">
   <meta property="og:title" content="LODZERO Engine">
   <meta property="og:description" content="A love letter to making games: a small, fast engine and editor where everything you need is in one place.">
   <meta property="og:image" content="https://lodzero.com/media/hero-sumo.jpg">
@@ -37,7 +37,7 @@
       <div class="shell hero-content">
         <p class="eyebrow">Game engine &amp; editor</p>
         <h1>Make games that look great and run smooth.</h1>
-        <p class="lede">LODZERO is a small, fast engine made for artists and programmers alike. Model, texture, light, script and play in one place, then ship your game to Steam.</p>
+        <p class="lede">LODZERO is a small, fast engine made for artists and programmers alike. Model, texture, grow trees, light, script and play in one place, then ship your game to Steam.</p>
         <div class="hero-actions">
           <a class="btn" href="#contact">Request early access</a>
           <a class="btn btn-ghost" href="#showcase">See what it does</a>
@@ -58,14 +58,15 @@
         <div class="why-intro">
           <p class="eyebrow">Why LODZERO</p>
           <h2 id="why-title">A love letter to making games.</h2>
-          <p class="lede">We built LODZERO to make the games we always wanted to make, the way we always wanted to make them. That meant leaving a lot of baggage behind.</p>
+          <p class="lede">We built LODZERO to make the games we always wanted to make, the way we always wanted to make them.</p>
         </div>
-        <ul class="nopes" aria-label="What we left out">
-          <li>Blurry, smeary frames</li>
-          <li>Installs measured in gigabytes</li>
-          <li>Coffee-break C++ compiles</li>
-          <li>Five apps to make one asset</li>
-          <li>Multiplayer bugs nobody can reproduce</li>
+        <ul class="promises" aria-label="What that means">
+          <li>Crisp, clean frames</li>
+          <li>Smooth from the very first play</li>
+          <li>A small, quick install</li>
+          <li>Code changes in seconds</li>
+          <li>One app from model to game</li>
+          <li>Multiplayer bugs you can replay</li>
         </ul>
         <p class="why-punch">Everything is here. <span>Fast, small and fun.</span></p>
         <div class="pillars">
@@ -95,6 +96,26 @@
       </div>
 
       <article class="feature">
+        <div class="feature-media"><video data-src="media/image-quality.mp4" poster="media/image-quality.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Image quality</p>
+          <h3>Crisp in motion. Smooth on every screen.</h3>
+          <p>Temporal anti-aliasing keeps fine detail steady, from distant poles to scaffolding and wires, without the smear. Render at a lower resolution and upscale with DLSS or FSR when you need the headroom. Frames are paced to the display, so play feels responsive and silky on fixed and variable refresh screens alike.</p>
+          <ul class="ticks"><li>Temporal anti-aliasing and upscaling</li><li>NVIDIA DLSS and AMD FSR</li><li>Low-latency frame pacing with Reflex and Anti-Lag</li><li>Graphics settings picked for each player's PC</li><li>Shaders ready before you play</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><video data-src="media/destruction.mp4" poster="media/destruction.jpg" muted loop playsinline preload="none"></video></div>
+        <div class="feature-copy">
+          <p class="kicker">Destruction</p>
+          <h3>Everything breaks beautifully.</h3>
+          <p>Car bodies dent where they're hit and stay dented. Soft things squish and wobble, props shatter, scaffolding comes down plank by plank and rope fences catch you and throw you back. All of it is set up in the editor, not written by hand.</p>
+          <ul class="ticks"><li>Crash damage and squish</li><li>Smashable props and collapsing structures</li><li>Rope fences and swinging obstacles</li><li>Debris that tumbles, rolls and settles</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
         <div class="feature-media"><video data-src="media/play-in-editor.mp4" poster="media/play-in-editor.jpg" muted loop playsinline preload="none"></video></div>
         <div class="feature-copy">
           <p class="kicker">Editor</p>
@@ -105,12 +126,22 @@
       </article>
 
       <article class="feature">
+        <div class="feature-media"><img src="media/tune.jpg" alt="The Tune pane listing a car's audio and boost values beside the viewport" loading="lazy" width="1920" height="1080"></div>
+        <div class="feature-copy">
+          <p class="kicker">Tuning</p>
+          <h3>Tune the feel while you play.</h3>
+          <p>Tag any value in your code and it shows up in the Tune pane. Drag it while the game runs and feel the difference on the next corner. The pane shows what you changed since your last commit and saves versions you can go back to.</p>
+          <ul class="ticks"><li>One attribute to expose a value</li><li>Live edits during Play</li><li>Changes marked, versions saved</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
         <div class="feature-media"><video data-src="media/multiplayer.mp4" poster="media/multiplayer.jpg" muted loop playsinline preload="none"></video></div>
         <div class="feature-copy">
           <p class="kicker">Multiplayer</p>
           <h3>Online multiplayer, built right in.</h3>
           <p>Mark a value to sync it and a method to call it across the network, and you're online. Go server-authoritative so results are consistent and cheat-resistant, or client-authoritative so each player simulates their own objects. Either way, every player's own actions feel instant. Test a whole match with several players inside the editor.</p>
-          <ul class="ticks"><li>Server- or client-authoritative</li><li>Prediction and rollback</li><li>Lag compensation</li><li>Rejoin and host migration</li><li>Steam lobbies, invites and relay</li></ul>
+          <ul class="ticks"><li>Server- or client-authoritative</li><li>Prediction and rollback</li><li>Lag compensation</li><li>Parties, rejoin and seamless host handover</li><li>Steam lobbies, invites and relay</li></ul>
         </div>
       </article>
 
@@ -139,8 +170,31 @@
         <div class="feature-copy">
           <p class="kicker">Modelling</p>
           <h3>A modelling suite, right in the level.</h3>
-          <p>Block out and finish geometry where it lives, with the tools you reach for every day. Collision follows the mesh as you work: cut a hole and players can fall through it.</p>
-          <ul class="ticks"><li>Extrude, bevel, inset, bridge, loops and cuts</li><li>Booleans, mirror and soft selection</li><li>UV tools and automatic unwrapping</li><li>Curves and swept pipes</li></ul>
+          <p>Block out and finish geometry where it lives, with the tools you reach for every day. Stack modifiers to subdivide, mirror or cut without losing a single edit. Collision follows the mesh as you work: cut a hole and players can fall through it.</p>
+          <ul class="ticks"><li>Extrude, bevel, inset, bridge, loops and cuts</li><li>Modifier stack: subdivision, mirror, booleans, array, bevel</li><li>UV editor and automatic unwrapping</li><li>Soft selection, vertex colours, curves and pipes</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
+        <div class="feature-media"><img src="media/texturing.jpg" alt="A fire hydrant, boost tank and oil barrel from Sumo Cars, each textured with layers of smart materials" loading="lazy" width="1920" height="1080"></div>
+        <div class="feature-copy">
+          <p class="kicker">Texturing <span class="badge">Preview</span></p>
+          <h3>Paint with materials, layer by layer.</h3>
+          <p>Texture a model the way a painter works: stack smart materials, fills and masks, and watch rust gather in the creases and paint wear off the edges. Drop stickers straight onto the model in the viewport. Every layer stays editable, and the stack updates live.</p>
+          <ul class="ticks"><li>Smart materials and smart masks</li><li>Stickers placed in the viewport</li><li>Live, GPU-composited layers</li><li>Built from your own texture graphs</li></ul>
+        </div>
+      </article>
+
+      <article class="feature feature-duo">
+        <div class="feature-media duo">
+          <video data-src="media/texture-graph.mp4" poster="media/texture-graph.jpg" muted loop playsinline preload="none"></video>
+          <video data-src="media/hotspots.mp4" poster="media/hotspots.jpg" muted loop playsinline preload="none"></video>
+        </div>
+        <div class="feature-copy">
+          <p class="kicker">Texture graphs <span class="badge">Preview</span></p>
+          <h3>Procedural materials, node by node.</h3>
+          <p>A full node-based material editor inside the engine: noises, patterns, filters, blends and PBR outputs, with a live 3D preview. Bake a high-poly model down, texture a mesh from its own shape, or describe what you want and an AI agent edits the graph for you.</p>
+          <ul class="ticks"><li>Hundreds of nodes</li><li>High-poly bakes, rounded edges and panels from the mesh</li><li>Hotspot sheets for trims and panels</li><li>Imports Substance Designer graphs</li></ul>
         </div>
       </article>
 
@@ -155,25 +209,22 @@
       </article>
 
       <article class="feature">
+        <div class="feature-media"><img src="media/trees.jpg" alt="Generated trees behind a car in the Sumo Cars main menu" loading="lazy" width="1920" height="1080"></div>
+        <div class="feature-copy">
+          <p class="kicker">Foliage <span class="badge">Preview</span></p>
+          <h3>Grow your own trees.</h3>
+          <p>Trees, bushes and grass grow from generators you shape with a few sliders: trunk, branches, leaves and the gaps between them. Leaves are built from real vein structure, light glows through them, and the whole plant sways and flutters in the scene's wind.</p>
+          <ul class="ticks"><li>Tree, conifer, bush and grass generators</li><li>Procedural leaves and textured bark</li><li>Wind, translucency and canopy shading</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
         <div class="feature-media"><video data-src="media/ai-modelling.mp4" poster="media/ai-modelling.jpg" muted loop playsinline preload="none"></video></div>
         <div class="feature-copy">
           <p class="kicker">AI modelling <span class="badge">Experimental</span></p>
           <h3>Ask for a bar stool. Get a bar stool.</h3>
           <p>Describe a model and an AI agent builds it with the editor's own modelling tools: it blocks it out, checks its renders and refines. The result is ordinary, editable geometry, and it can change models you made too.</p>
           <ul class="ticks"><li>Uses the same tools you do</li><li>Plain, editable meshes</li><li>Edits the selected model on request</li></ul>
-        </div>
-      </article>
-
-      <article class="feature feature-duo">
-        <div class="feature-media duo">
-          <video data-src="media/texture-graph.mp4" poster="media/texture-graph.jpg" muted loop playsinline preload="none"></video>
-          <video data-src="media/hotspots.mp4" poster="media/hotspots.jpg" muted loop playsinline preload="none"></video>
-        </div>
-        <div class="feature-copy">
-          <p class="kicker">Texture graphs <span class="badge">Preview</span></p>
-          <h3>Procedural materials, node by node.</h3>
-          <p>A full node-based texture generator inside the editor: noises, patterns, filters, blends and PBR outputs, with a live 3D preview. Graphs can texture a mesh from its own shape, and textures stay linked to the graph that made them.</p>
-          <ul class="ticks"><li>Hundreds of nodes</li><li>Hotspot sheets for trims and panels</li><li>Rounded edges and panels baked from the mesh</li><li>Imports Substance Designer graphs</li></ul>
         </div>
       </article>
 
@@ -198,6 +249,16 @@
       </article>
 
       <article class="feature">
+        <div class="feature-media"><img src="media/sound.jpg" alt="The Sound Designer with sounds layered on a timeline" loading="lazy" width="1920" height="1080"></div>
+        <div class="feature-copy">
+          <p class="kicker">Audio</p>
+          <h3>Sound design without the round trips.</h3>
+          <p>Layer sounds on a timeline, add a little random pitch and volume, and hear it straight away. Mix the whole game with buses, snapshots and ducking, and give engines a voice that rises and falls with every rev.</p>
+          <ul class="ticks"><li>Sound Designer with live preview</li><li>Mixer, snapshots, ducking and reverb zones</li><li>Engine sounds that follow revs and throttle</li><li>Doppler and occlusion</li></ul>
+        </div>
+      </article>
+
+      <article class="feature">
         <div class="feature-media"><video data-src="media/game-ui.mp4" poster="media/game-ui.jpg" muted loop playsinline preload="none"></video></div>
         <div class="feature-copy">
           <p class="kicker">Game UI</p>
@@ -217,11 +278,11 @@
         </div>
         <div class="game-grid">
           <article class="game">
-            <img src="media/sumo-cars.jpg" alt="Cars battling around a pit in a Sumo Cars arena" loading="lazy" width="1136" height="639">
+            <img src="media/sumo-cars.jpg" alt="Cars brawling on a floating Sumo Cars arena" loading="lazy" width="1920" height="1080">
             <div class="game-copy">
               <h3>Sumo Cars</h3>
-              <p>Party car sumo for up to six players online. Bump, blast and knock your friends off floating arenas.</p>
-              <a class="link" href="https://store.steampowered.com/app/1500880/" target="_blank" rel="noopener">On Steam as Random Racing →</a>
+              <p>Sumo wrestling, but with cars. Ram, shove and blast your friends off floating arenas in a chaotic physics party brawler, then build your own arenas in its map editor. Friendships may not survive.</p>
+              <a class="link" href="https://store.steampowered.com/app/1500880/" target="_blank" rel="noopener">Sumo Cars on Steam →</a>
             </div>
           </article>
           <article class="game">
@@ -247,10 +308,11 @@
           <section class="tool">
             <h3>Rendering</h3>
             <ul>
-              <li>Forward or deferred, MSAA or TAA</li>
+              <li>Forward or deferred, MSAA or TAA, DLSS or FSR</li>
               <li>Ambient occlusion, reflections, depth of field, motion blur</li>
               <li>Soft sun shadows and many shadowed lights</li>
               <li>Area lights, height fog, cloud layers, 3D skyboxes</li>
+              <li>A sun you aim by time of day</li>
               <li>Projected decals, skid marks and water ripples</li>
               <li>HLSL surface shaders</li>
             </ul>
@@ -259,8 +321,9 @@
             <h3>Effects</h3>
             <ul>
               <li>GPU particles with curves, flipbooks and ribbons</li>
-              <li>Soft and lit particles, emitter lights</li>
-              <li>Ropes, cables and dynamic lines</li>
+              <li>Mesh particles, soft and lit particles, emitter lights</li>
+              <li>Effects driven by parameters and triggers from gameplay</li>
+              <li>Screen overlays for cracks, damage and hits</li>
               <li>Glass, jelly and liquid materials</li>
             </ul>
           </section>
@@ -269,8 +332,9 @@
             <ul>
               <li>Rigid bodies, joints and characters</li>
               <li>Vehicles, from sim to arcade</li>
+              <li>Crash damage, squish and jiggle</li>
+              <li>Breakable props, collapsing structures and ropes</li>
               <li>Navigation meshes and agents</li>
-              <li>Squishy elastic solids <span class="badge">Experimental</span></li>
             </ul>
           </section>
           <section class="tool">
@@ -280,6 +344,26 @@
               <li>Animation graphs and state machines</li>
               <li>Motion matching</li>
               <li>Skeleton editing and pose mode</li>
+              <li>Doors, hoods and hinges that swing for real</li>
+            </ul>
+          </section>
+          <section class="tool">
+            <h3>Building worlds</h3>
+            <ul>
+              <li>Prefabs you can click into, one level at a time</li>
+              <li>Place pane with thumbnails, favourites and recents</li>
+              <li>Thousands of placed models in one instance set</li>
+              <li>Generators that build and place models from code</li>
+              <li>Outliner with groups, locks and quick search</li>
+            </ul>
+          </section>
+          <section class="tool">
+            <h3>Audio</h3>
+            <ul>
+              <li>Layered, randomized sound designs</li>
+              <li>Spatial sound with doppler, occlusion and reverb zones</li>
+              <li>Mixer with buses, snapshots and a limiter</li>
+              <li>Engine sound banks for vehicles</li>
             </ul>
           </section>
           <section class="tool">
@@ -292,11 +376,21 @@
             </ul>
           </section>
           <section class="tool">
+            <h3>Mods</h3>
+            <ul>
+              <li>Ship a map editor with your game</li>
+              <li>Players publish to the Steam Workshop</li>
+              <li>Online sessions fetch the host's mods to join</li>
+              <li>You choose what players can change</li>
+            </ul>
+          </section>
+          <section class="tool">
             <h3>Ship it</h3>
             <ul>
               <li>One-click packaging with content streaming</li>
               <li>Native, ahead-of-time compiled builds</li>
               <li>Steam uploads from the editor</li>
+              <li>A "Powered by LODZERO" intro that hides your loading</li>
               <li>Installer and a build-your-first-game tutorial</li>
             </ul>
           </section>
@@ -311,7 +405,8 @@
         <p class="lede">LODZERO is in early access on Windows. Tell us what you're making and we'll get you set up. Studios, publishers and press are welcome too.</p>
         <div class="hero-actions">
           <a class="btn" href="mailto:contact@lodzero.com?subject=LODZERO%20early%20access">contact@lodzero.com</a>
-          <a class="btn btn-ghost" href="https://x.com/ozmant" target="_blank" rel="noopener">Follow on X</a>        </div>
+          <a class="btn btn-ghost" href="https://x.com/ozmant" target="_blank" rel="noopener">Follow on X</a>
+        </div>
       </div>
     </section>
   </main>

@@ -112,7 +112,7 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.1em 0.35em; borde
 .feature:nth-of-type(even) .feature-media { order: 2; }
 
 .feature-media { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--bg-card); border: 1px solid var(--line); box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8); }
-.feature-media video { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--bg-card); }
+.feature-media video, .feature-media img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background: var(--bg-card); }
 .feature-media.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); }
 
 /* Two clips side by side get the full width, with the copy below them. */
@@ -135,11 +135,13 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.1em 0.35em; borde
 .why-intro { max-width: 46rem; }
 .why-intro h2 { font-size: clamp(2.3rem, 5.4vw, 4.2rem); font-weight: 800; margin-top: 0.7rem; }
 .why-intro .lede { margin-top: 1.2rem; }
-.nopes { list-style: none; padding: 0; margin: 3rem 0 0; display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; }
-.nopes li {
+.promises { list-style: none; padding: 0; margin: 3rem 0 0; display: flex; flex-wrap: wrap; gap: 0.6rem 2.2rem; }
+.promises li {
+  position: relative; padding-left: 1.1rem;
   font-family: var(--display); font-weight: 600; font-size: clamp(1.15rem, 2.2vw, 1.6rem); letter-spacing: -0.015em;
-  color: var(--dim); text-decoration: line-through; text-decoration-color: rgba(255, 92, 92, 0.85); text-decoration-thickness: 3px;
+  color: var(--muted);
 }
+.promises li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--accent); }
 .why-punch { margin-top: 2.6rem; font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 4.2vw, 3.2rem); letter-spacing: -0.03em; line-height: 1.1; }
 .why-punch span { color: var(--accent); }
 .pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 3rem; }
@@ -200,7 +202,7 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.1em 0.35em; borde
   .feature-duo .feature-copy .ticks { margin-top: 1.4rem; }
   .game-grid, .tool-grid { grid-template-columns: 1fr; }
   .why { padding-top: 5rem; }
-  .nopes { flex-direction: column; gap: 0.5rem; }
+  .promises { flex-direction: column; gap: 0.5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
