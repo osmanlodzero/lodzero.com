@@ -134,20 +134,12 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.1em 0.35em; borde
 .why { padding: 7rem 0 2rem; }
 .why-intro { max-width: 46rem; }
 .why-intro h2 { font-size: clamp(2.3rem, 5.4vw, 4.2rem); font-weight: 800; margin-top: 0.7rem; }
-.why-intro .lede { margin-top: 1.2rem; }
-.promises { list-style: none; padding: 0; margin: 3rem 0 0; display: flex; flex-wrap: wrap; gap: 0.6rem 2.2rem; }
-.promises li {
-  position: relative; padding-left: 1.1rem;
-  font-family: var(--display); font-weight: 600; font-size: clamp(1.15rem, 2.2vw, 1.6rem); letter-spacing: -0.015em;
-  color: var(--muted);
-}
-.promises li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 0.4rem; height: 0.4rem; border-radius: 50%; background: var(--accent); }
-.why-punch { margin-top: 2.6rem; font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 4.2vw, 3.2rem); letter-spacing: -0.03em; line-height: 1.1; }
-.why-punch span { color: var(--accent); }
-.pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 3rem; }
-.pillar { padding: 1.6rem; border-radius: var(--radius); background: var(--bg-card); border: 1px solid var(--line); }
-.pillar h3 { font-size: 1.35rem; margin-bottom: 0.6rem; }
-.pillar p { color: var(--muted); font-size: 0.98rem; }
+.why-intro .lede { margin-top: 1.2rem; max-width: 40rem; }
+.why-shot { margin: 3.5rem 0 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.why-shot img { width: 100%; }
+.why-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; margin-top: 2rem; }
+.why-points h3 { font-size: 1.2rem; font-weight: 700; }
+.why-points p { color: var(--muted); font-size: 0.98rem; margin-top: 0.45rem; }
 
 /* Games */
 .games { padding: 6rem 0; }
@@ -190,7 +182,7 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.1em 0.35em; borde
   .feature, .feature:nth-of-type(even) { grid-template-columns: 1fr; margin-bottom: 4.5rem; }
   .feature:nth-of-type(even) .feature-media { order: 0; }
   .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .pillars { grid-template-columns: 1fr; }
+  .why-points { grid-template-columns: 1fr; gap: 1.6rem; }
 }
 @media (max-width: 640px) {
   .nav a:not(.btn) { display: none; }
@@ -202,7 +194,6 @@ code { font-family: var(--mono); font-size: 0.88em; padding: 0.1em 0.35em; borde
   .feature-duo .feature-copy .ticks { margin-top: 1.4rem; }
   .game-grid, .tool-grid { grid-template-columns: 1fr; }
   .why { padding-top: 5rem; }
-  .promises { flex-direction: column; gap: 0.5rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
