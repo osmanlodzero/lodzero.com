@@ -225,9 +225,9 @@
         <div class="feature-media"><video data-src="media/realtime-gi.mp4" poster="media/realtime-gi.jpg" muted loop playsinline preload="none"></video></div>
         <div class="feature-copy">
           <p class="kicker">Lighting <span class="badge">Preview</span></p>
-          <h3>Realtime global illumination</h3>
-          <p>Move the sun, a lamp or a wall and the bounce light follows at once, with no bake. Ray-traced probes fill the world and a per-pixel final gather keeps corners and contact shading crisp.</p>
-          <ul class="ticks"><li>Hardware ray-traced probes</li><li>Per-pixel final gather</li><li>Dynamic sun, lights and geometry</li></ul>
+          <h3>Realtime global illumination and reflections</h3>
+          <p>Move the sun, a lamp or a wall and the bounce light and reflections follow at once, with no bake. Reflections start on screen and continue as hardware rays where the screen runs out, so glass, paint and polished floors show what's behind the camera too. A built-in path tracer shows the ground truth in any viewport, so you can check your lighting against it.</p>
+          <ul class="ticks"><li>Hardware ray-traced probes and per-pixel final gather</li><li>Ray-traced reflections</li><li>Dynamic sun, lights and moving objects</li><li>Path-traced reference view in the editor</li></ul>
         </div>
       </article>
 
@@ -236,8 +236,8 @@
         <div class="feature-copy">
           <p class="kicker">Lighting</p>
           <h3>Live baked lighting</h3>
-          <p>Prefer baked? Move a wall and the lightmaps rebake in the background while you keep working. The GPU baker uses hardware ray tracing and denoising, with reflection probes that fit their rooms.</p>
-          <ul class="ticks"><li>Background rebakes while you edit</li><li>Hardware ray-traced bakes</li><li>Directional lightmaps and light probes</li></ul>
+          <p>Prefer baked? Move a wall and the lightmaps rebake in the background while you keep working. Light probes place themselves over the whole scene and capture with hardware rays, and reflections trace against the bake too.</p>
+          <ul class="ticks"><li>Background rebakes while you edit</li><li>Hardware ray-traced bakes and probes</li><li>Automatic light probe placement</li><li>Directional lightmaps</li></ul>
         </div>
       </article>
 
@@ -302,12 +302,13 @@
             <h3>Rendering</h3>
             <ul>
               <li>Forward or deferred, MSAA or TAA, DLSS or FSR</li>
-              <li>Ambient occlusion, reflections, depth of field, motion blur</li>
+              <li>Ambient occlusion, ray-traced reflections, depth of field, motion blur</li>
               <li>Soft sun shadows and many shadowed lights</li>
               <li>Area lights, height fog, cloud layers, 3D skyboxes</li>
               <li>A sun you aim by time of day</li>
               <li>Projected decals, skid marks and water ripples</li>
               <li>Write your own surface shaders</li>
+              <li>A built-in path tracer to check your lighting</li>
             </ul>
           </section>
           <section class="tool">
